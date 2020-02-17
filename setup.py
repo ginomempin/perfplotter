@@ -10,6 +10,7 @@ setup(
     install_requires=[
         "bokeh",
         "Click",
+        "numpy",
         "pandas"
     ],
     entry_points="""

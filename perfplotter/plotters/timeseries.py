@@ -28,6 +28,9 @@ class TimeSeries(Plotter):
         fig.yaxis.axis_label = "Measurement Value"
         fig.background_fill_color = "Beige"
         fig.background_fill_alpha = 0.5
-        fig.line(self._data.index, self._data.val)
+        fig.line(
+            self._data.index,
+            self._data.val,
+            line_color="CornflowerBlue")
 
         show(fig)

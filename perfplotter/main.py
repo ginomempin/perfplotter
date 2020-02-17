@@ -1,7 +1,7 @@
 import click
 
 from .examples import gaussian
-from .plotters import TimeSeries
+from .plotters import Histogram, TimeSeries
 
 
 # ------------------------------------------------------------------------------
@@ -32,6 +32,24 @@ def timeseries(filename, dts_idx, val_idx):
     plotter = TimeSeries(filename)
     plotter.plot(index_col=dts_idx, value_col=val_idx)
 
+
+@plot_cmds.command(short_help="Show a histogram plot")
+@click.argument("filename")
+@click.option("-x", "dts_idx", default=0, show_default=True, type=int, help="0-based index of the Date/Time")
+@click.option("-y", "val_idx", default=1, show_default=True, type=int, help="0-based index of the Measurement Value")
+def histogram(filename, dts_idx, val_idx):
+    """
+    Generates a histogram plot using the data from FILENAME.csv.
+
+    The plotter uses the Date/Time column for the X-axis and the
+    measurement value for the Y-axis. It assumes column=0 to be
+    the Date/Time column and column=1 to be the measurement value
+    column. Pass in --dts and --val to specify different indices.
+
+    The plotter currently does not support CSV with headers.
+    """
+    plotter = Histogram(filename)
+    plotter.plot(index_col=dts_idx, value_col=val_idx)
 
 # ------------------------------------------------------------------------------
 # CLI commands for testing
