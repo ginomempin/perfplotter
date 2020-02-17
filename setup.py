@@ -6,7 +6,7 @@ setup(
     version="0.0.1",
     packages=find_packages(),
     include_package_data=True,
-    python_requires='~=3.7',
+    python_requires='>=3.6',
     install_requires=[
         "bokeh",
         "Click",
