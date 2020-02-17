@@ -28,7 +28,6 @@ class Histogram(Plotter):
             "min": edges[:-1],     # All the minimum edges of all the buckets
             "max": edges[1:]       # All the maxmimum edges of all the buckets
         })
-        print(hist)
         minmax = zip(hist_annotated["min"], hist_annotated["max"])
         hist_annotated["distribution"] = ["%.2f to %.2f" % (min, max) for min, max in minmax]
         hist_annotated["percentage"] = [100.0 * (val / self._data.size) for val in hist_annotated["val"]]
