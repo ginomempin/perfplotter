@@ -6,7 +6,6 @@ setup(
     packages=find_packages(
         where='.',
         exclude=('tests', 'tutorials'),
-        include=('perfplotter', ),
     ),
     include_package_data=True,
     python_requires='>=3.8',
