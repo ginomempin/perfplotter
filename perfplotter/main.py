@@ -65,7 +65,7 @@ def test_cmds():
 @click.argument('filename')
 @click.option('--nrows', show_default=True, default=100, help='Number of rows')
 @click.option('--ncols', show_default=True, default=3, help='Number of cols')
-def samples(filename, nrows, ncols):
+def examples(filename, nrows, ncols):
     """
     Generates an out/FILENAME.csv with random values.
 
@@ -75,7 +75,6 @@ def samples(filename, nrows, ncols):
     forming a gaussian distribution in the range 1-10.
     """
     gaussian.generate(filename, nrows, ncols)
-    print(f'Generated out/{filename}.csv')
 
 
 # ------------------------------------------------------------------------------

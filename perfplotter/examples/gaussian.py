@@ -26,3 +26,4 @@ def generate(filename, nrows, ncols):
         data.append(row)
 
     writer.create_csv(filepath, data)
+    print(f'Generated {filepath}')

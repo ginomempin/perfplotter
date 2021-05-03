@@ -43,24 +43,38 @@ Read data from CSV files using `pandas` and generate interactive plots using `bo
 
 ## Usage
 
-Show the main usage/help info
+### Show the main usage/help info
 
 ```none
 $ perfplotter --help
 ```
 
-Show each command's usage/help info
+### Show each command's usage/help info
 
 ```none
+$ perfplotter examples --help
 $ perfplotter timeseries --help
-$ perfplotter samples --help
+$ perfplotter histogram --help
 ```
 
-Test
+### Supported plots
+
+* Plot TimeSeries
+    ```
+    $ perfplotter timeseries --help
+    $ perfplotter timeseries /path/to/my.csv -x 1 -y 2
+
+    ```
+* Plot Histogram
+    ```
+    $ perfplotter histogram --help
+    $ perfplotter histogram /path/to/my.csv -x 1 -y 2
+
+### Use `examples` to test
 
 ```none
-$ perfplotter samples sample1
-Generated out/sample1.csv
+$ perfplotter examples sample1
+Generated <current-working-directory>/out/sample1.csv
 
 $ perfplotter timeseries out/sample1.csv
 ```
