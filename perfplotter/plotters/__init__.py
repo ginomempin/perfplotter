@@ -1,2 +1,1 @@
-
-from .timeseries import TimeSeries
+from .timeseries import TimeSeries  # noqa: F401

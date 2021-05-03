@@ -6,11 +6,11 @@ from . import writer
 
 
 def generate(filename, nrows, ncols):
-    filedir = Path.cwd().joinpath("out")
+    filedir = Path.cwd().joinpath('out')
     if not Path.exists(filedir):
         Path.mkdir(filedir)
 
-    filepath = filedir.joinpath(filename + ".csv")
+    filepath = filedir.joinpath(filename + '.csv')
 
     data = []
     dt = datetime.now()

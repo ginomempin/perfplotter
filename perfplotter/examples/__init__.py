@@ -1,2 +1,1 @@
-
-from . import gaussian
+from . import gaussian  # noqa: F401

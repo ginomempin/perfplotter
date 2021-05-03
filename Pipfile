@@ -11,10 +11,11 @@ pillow = "*"
 
 [dev-packages]
 flake8 = "*"
-isort = "*"
-yapf = "*"
-mypy = "*"
 flake8-quotes = "*"
+isort = "*"
+mypy = "*"
+pre-commit = "*"
+yapf = "*"
 
 [requires]
 python_version = "3.8"
