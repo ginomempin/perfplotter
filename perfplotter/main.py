@@ -39,7 +39,7 @@ def test_cmds():
 @click.option('--ncols', show_default=True, default=3, help='Number of cols')
 def samples(filename, nrows, ncols):
     """
-    Generates a FILENAME.csv with random values.
+    Generates an out/FILENAME.csv with random values.
 
     The CSV file will have 100 rows and 3 columns.
     The 1st column contains datetime values.
@@ -47,11 +47,17 @@ def samples(filename, nrows, ncols):
     forming a gaussian distribution in the range 1-10.
     """
     gaussian.generate(filename, nrows, ncols)
+    print(f'Generated out/{filename}.csv')
 
 
 # ------------------------------------------------------------------------------
 # MAIN
 # ------------------------------------------------------------------------------
 
-cli = click.CommandCollection(sources=[plot_cmds, test_cmds],
-                              help='Shows interactive plots to visualize data from CSV files.')
+cli = click.CommandCollection(
+    sources=[
+        plot_cmds,
+        test_cmds,
+    ],
+    help='Shows interactive plots to visualize data from CSV files.',
+)

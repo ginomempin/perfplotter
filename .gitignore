@@ -2,6 +2,9 @@
 # Project-Specific .gitignore
 ################################################################################
 
+# Env Files
+.DS_Store
+
 # IDE Files
 .vscode/
 
