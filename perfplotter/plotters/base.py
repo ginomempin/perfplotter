@@ -8,15 +8,15 @@ class Plotter(ABC):
         self._data_file = data_file
         self._data = None
 
-    def _read_data(self, index_name, value_name, index_by_date_time=False):
+    def _read_data(self, index_name, index_col, value_name, value_col, index_by_date_time=False):
         self._data = pd.read_csv(
             self._data_file,
-            header=None,        # TODO: Expose as CLI parameter
-            usecols=[0, 2],     # TODO: Expose as CLI parameter
-            index_col=0,        # TODO: Expose as CLI parameter
+            header=None,
+            usecols=[index_col, value_col],
+            index_col=0,
             parse_dates=index_by_date_time,
             names=[index_name, value_name])
 
     @abstractmethod
-    def plot(self):
+    def plot(self, **kwargs):
         raise NotImplementedError()
