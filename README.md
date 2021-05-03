@@ -40,6 +40,11 @@ Read data from CSV files using `pandas` and generate interactive plots using `bo
     ```
     * Use bare `pip` here to exclude `perfplotter` from the Pipfile* (which is under version control)
     * Do `pipenv clean` to *really* make sure it's not included in the Pipfile*
+1. Start and open any of the jupyter notebooks
+    ```none
+    $ jupyter notebook --notebook-dir tutorials/notebooks
+
+    ```
 
 ## Usage
 

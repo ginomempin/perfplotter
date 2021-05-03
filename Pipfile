@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 bokeh = "*"
 click = "*"
+jupyterlab = "*"
+matplotlib = "*"
 pandas = "*"
 pillow = "*"
 
