@@ -49,4 +49,5 @@ repos:
     entry: pipenv check --quiet
     language: system
     files: 'Pipfile*'
+    always_run: true
     pass_filenames: false
