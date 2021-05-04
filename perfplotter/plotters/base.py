@@ -15,7 +15,8 @@ class Plotter(ABC):
             usecols=[index_col, value_col],
             index_col=0,
             parse_dates=index_by_date_time,
-            names=[index_name, value_name])
+            names=[index_name, value_name],
+        )
 
     @abstractmethod
     def plot(self, **kwargs):
