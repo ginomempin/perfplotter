@@ -17,11 +17,13 @@ repos:
     - "flake8-quotes"
     args:
     - --config=./setup.cfg
+    exclude: ".*template.*"
 - repo: https://github.com/PyCQA/isort
   rev: "5.8.0"
   hooks:
   - id: isort
     name: isort
+    exclude: ".*template.*"
 - repo: https://github.com/pre-commit/mirrors-mypy
   rev: "v0.812"
   hooks:
@@ -34,6 +36,7 @@ repos:
     - --warn-no-return
     - --warn-unreachable
     - --warn-unused-ignores
+    exclude: ".*template.*"
 - repo: local
   hooks:
   - id: pipenv-clean

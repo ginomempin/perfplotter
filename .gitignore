@@ -8,8 +8,13 @@
 # IDE Files
 .vscode/
 
+# Input Files
+tutorials/data/*
+!tutorials/data/sources.txt
+
 # Output Files
 out/
+tutorials/**/*output*html
 
 ################################################################################
 # Common Python .gitignore
